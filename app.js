@@ -21,8 +21,6 @@ app.use('/api', apiRouter)
 app.get('/', (req, res)=> {
   res.sendFile(path.join(__dirname+'build/index.html'))
 })
+app.listen(port);
 
-if(!module.parent){
-  app.listen(port);
-}
 module.exports = app

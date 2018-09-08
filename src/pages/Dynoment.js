@@ -1,7 +1,7 @@
 import React, {
     Component
 } from "react"
-
+const port = process.env.PORT || 3001
 import Table from "../components/Table.js"
 export default class Dynoment extends Component {
     state = {
@@ -9,7 +9,7 @@ export default class Dynoment extends Component {
         loading: true
     }
     getData() {
-        fetch('http://localhost:3001/api/response/')
+        fetch(`http://localhost:${port}/api/response/`)
         .then((res) => {
             if(res.status === 404) throw new Error(res.statusText);
             return res.json()
