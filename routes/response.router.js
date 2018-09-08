@@ -14,7 +14,7 @@ var _Response = dynamoose.model('Response1',{id:String, name:String, response:St
 router.get('/', (req, res) => {
   _Response.scan().exec().then((cat)=> {
     console.log(cat)
-    res.status(200).end(cat)
+    res.status(200).send(cat)
   }).catch((err) => {console.log(err)})
 })
 
