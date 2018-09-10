@@ -8,7 +8,7 @@ class App extends Component {
     return (
       <div className="App">
       <Router>
-        <Route path ="/" component={Dynoment}></Route>
+        <Route path ="/path" component={Dynoment}></Route>
       </Router>
         <header className="App-header">
         </header>
