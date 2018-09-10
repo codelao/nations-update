@@ -4,7 +4,7 @@ const path = require('path');
 const dynamoose = require('dynamoose')
 const bodyParser= require('body-parser')
 const apiRouter = require('./routes/api.router');
-
+const cors = require('cors');
 const port = process.env.PORT || 3000
 
 
@@ -17,6 +17,7 @@ app.use(express.static(path.join(__dirname, 'build')));
 app.all('/', (req, res)=> {
   res.sendFile(path.join(__dirname+'build/index.html'))
 })
+app.use(cors())
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
