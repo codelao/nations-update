@@ -8,6 +8,12 @@ class App extends Component {
     return (
       <div className="App">
       <Router>
+        <Route {...props}
+              path="/members" 
+              render={props => (
+                this.state.authenticated ?
+                <Members {...props}/> : <Redirect to="/login"/>
+              )}/>
         <Route path ="/path" component={Dynoment}></Route>
       </Router>
         <header className="App-header">
