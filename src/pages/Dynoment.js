@@ -10,7 +10,7 @@ export default class Dynoment extends Component {
         loading: true
     }
     getData() {
-        fetch(`http://192.168.0.11:${port}/api/response/`)
+        fetch(`https://192.168.0.11:${port}/api/response/`)
         .then((res) => {
             if(res.status === 404) throw new Error(res.statusText);
             return res.json()
