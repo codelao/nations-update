@@ -3,14 +3,13 @@ import React, {
 } from "react"
 import Table from "../components/Table.js"
 const port = process.env.PORT || 3000
-console.log(port)
 export default class Dynoment extends Component {
     state = {
         mentorResponses: {},
         loading: true
     }
     getData() {
-        fetch(`https://192.175.21.15/api/response/`)
+        fetch(`http://localhost:${port}/api/response/`)
         .then((res) => {
             if(res.status === 404) throw new Error(res.statusText);
             return res.json()
