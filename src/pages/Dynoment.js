@@ -1,8 +1,8 @@
 import React, {
     Component
 } from "react"
-const request = require('superagent')
 import Table from "../components/Table.js"
+const request = require('superagent')
 const port = process.env.PORT || 3000
 console.log(port)
 export default class Dynoment extends Component {
