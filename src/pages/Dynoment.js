@@ -4,14 +4,13 @@ import React, {
 import Table from "../components/Table.js"
 const request = require('superagent')
 const port = process.env.PORT || 3000
-console.log(port)
+console.log(process.env)
 export default class Dynoment extends Component {
     state = {
         mentorResponses: {},
         loading: true
     }
     getData() {
-        console.log(port)
         fetch(`http://localhost:${port}/api/response/`)
         .then((res) => {
             if(res.status === 404) throw new Error(res.statusText);
