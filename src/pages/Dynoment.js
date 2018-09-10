@@ -23,7 +23,7 @@ export default class Dynoment extends Component {
         .catch(console.log)
     }*/
     getData(){
-        request()
+        request
             .get('http://localhost:${port}/api/response/')
             .end((err, res)=> {
                 if(res.status === 404) throw new Error(res.statusText);
