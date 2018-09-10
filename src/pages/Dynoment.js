@@ -10,7 +10,7 @@ export default class Dynoment extends Component {
         mentorResponses: {},
         loading: true
     }
-    /*getData() {
+    getData() {
         fetch(`http://localhost:${port}/api/response/`)
         .then((res) => {
             if(res.status === 404) throw new Error(res.statusText);
@@ -21,18 +21,6 @@ export default class Dynoment extends Component {
             this.setState({mentorResponses: data, loading: false})
         })
         .catch(console.log)
-    }*/
-    getData(){
-        request
-            .get('http://localhost:${port}/api/response/')
-            .end((err, res)=> {
-                if(res.status === 404) throw new Error(res.statusText);
-            return res.json()
-        })
-        .then((data)=> {
-            console.log(data)
-            this.setState({mentorResponses: data, loading: false})
-            })
     }
     componentDidMount() {
         console.log('component did mount')
