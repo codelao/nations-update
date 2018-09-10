@@ -17,6 +17,10 @@
     "css-loader": "^1.0.0",
     "dotenv": "^6.0.0"
   },
+  "engines": {
+    "node":"9.4.0",
+    "npm":"6.2.0"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
