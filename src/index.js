@@ -1,8 +1,26 @@
-import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import './css/index.css';
+import './css/calendar.css';
+import './css/react-datetime.css';
+import 'normalize.css'
+import 'react-big-calendar/lib/css/react-big-calendar.css'
 import registerServiceWorker from './registerServiceWorker';
+import {makeMainRoutes} from "./Routes"
+import history from './components/history'
 
-ReactDOM.render(<App />, document.getElementById('root'));
+console.log('history', history.location)
+const path = history.location.pathname
+console.log(path)
+require('normalize.css')
+const routes = makeMainRoutes()
+
+
+
+ReactDOM.render(routes, document.getElementById('root'))
+
+
+
+
+
+
 registerServiceWorker();

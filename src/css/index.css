@@ -1,0 +1,84 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+#carousel{
+  grid-row: 1/20 !important;
+  grid-column: 1/101 !important;
+}
+
+.home > #info{
+  grid-row: 40/60;
+  background-color:grey;
+  grid-column: 1/101;
+}
+.slider img{
+  box-shadow: #000; 
+  height: 50vh;
+}
+
+.home > #bottombar{
+  grid-row: 60/70;
+  grid-column: 1/101;
+  background-color: #00A160;
+}
+input {
+  border: 1px solid #000;
+}
+img {
+  height: 10vh;
+  width: 12vw;
+}
+.home {
+  text-align:center;
+  color:#00A160;
+  display: grid;
+grid-template-columns: repeat(100,1vw);
+grid-template-rows: repeat(100,2vh);
+}
+.home #homebar{
+  grid-column: 1/101;
+  grid-row:26/40;
+  background-color: #00A160 ;
+  filter: darken(100%); 
+}
+.home #middle{
+  grid-column:34/67;
+  grid-row:26/40;
+  opacity:0.7;
+  background-color:black;
+}
+
+.home #right{
+  background-color: #00A160 ;
+}
+#car1{
+  height: 20vh;
+  width: 30vw;
+}
+#current{
+  color: aqua;
+}
+#topnav{
+  background-color: #000 !important;
+}
+
+#topnavtext > li > a{
+  color: #00A160 !important;
+  padding-top: 3vh;
+  padding-left: 3vw;
+  font-weight: 800;
+}
+#eventWrapper{
+  grid-column: 1/2 !important;
+  padding: 20px !important;
+}
+#botnav{
+  background-color: darkgray !important;
+  position: sticky !important;
+  top: 0px;
+}
+#botnavtext > li > a{
+  color: white;
+}
