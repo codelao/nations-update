@@ -14,6 +14,8 @@ import Profiles from './components/Profiles';
 import Loading from './pages/Loading'
 import MenteeAdder from './pages/MenteeAdder'
 import api from './functions/api'
+import Services from './pages/Services'
+import Events from './pages/Events'
 
 import 'bootstrap/dist/css/bootstrap.css';
 import 'mdbreact/dist/css/mdb.css' 
@@ -28,6 +30,8 @@ const UnAuthenticatedRoutes = (
         <Route exact path="/" component={Home}/>
         <Route exact path="/loading" component={Loading}/>
         <Route exact path="/about" component={About}/>
+        <Route exact path="/service" component={Services}/>
+        <Route exact path="/events" component={Events}/>
         <Partners/> 
         </Switch>
 )
@@ -61,8 +65,7 @@ export const makeMainRoutes = () => {
       <div>
         {!loading && <NavBar/>}
           {UnAuthenticatedRoutes}
-         {logged && AuthenticatedRoutes
-         }  
+         {logged && AuthenticatedRoutes} 
       </div>
     </Router>
   );

@@ -37,6 +37,15 @@ const LoggedOutBottomNav = () => {
                         <NavItem>
                             <NavLink to={"/about"}>About</NavLink>
                         </NavItem>
+                        <NavItem>
+                            <NavLink to={"/service"}>Service</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink to={"/events"}>Events</NavLink>
+                        </NavItem>
+                        <NavItem>
+                            <NavLink to={"/donate"}>Donate</NavLink>
+                        </NavItem>
                     </Nav>
     )
 }
